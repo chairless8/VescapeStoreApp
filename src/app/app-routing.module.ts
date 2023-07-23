@@ -1,10 +1,10 @@
 // app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { ProductCatalogComponent } from './product-catalog/product-catalog.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { ProductCatalogComponent } from './components/product-catalog/product-catalog.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 
 const routes: Routes = [
   { path: 'profile', component: UserProfileComponent },

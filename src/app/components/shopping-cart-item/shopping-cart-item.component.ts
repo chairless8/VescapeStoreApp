@@ -1,5 +1,7 @@
 // shopping-cart-item.component.ts
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { Product } from '../../interfaces/product';
 
 @Component({
   selector: 'app-shopping-cart-item',
@@ -7,10 +9,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./shopping-cart-item.component.scss']
 })
 export class ShoppingCartItemComponent {
-  product = {
-    name: 'Example Product',
-    price: 100,
-    imageUrl: 'url-to-image',
-    quantity: 1
-  };
+  @Input() product!: Product;
 }
