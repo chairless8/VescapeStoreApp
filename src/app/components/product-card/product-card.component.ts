@@ -1,5 +1,8 @@
 // product-card.component.ts
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { addToCart } from '../../actions/cart.actions';
+import { Product } from '../../interfaces/product';
 
 @Component({
   selector: 'app-product-card',
@@ -7,9 +10,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent {
-  product = {
-    name: 'Example Product',
-    price: 100,
-    imageUrl: 'url-to-image'
-  };
+  @Input() product!: Product;
+
+  constructor(private store: Store) { }
+
+  addToCart(product: Product) {
+    this.store.dispatch(addToCart({ product }));
+  }
 }

@@ -1,3 +1,10 @@
 <!-- shopping-cart.component.html -->
-<h2>Shopping Cart</h2>
-<app-shopping-cart-item></app-shopping-cart-item>
+<div class="container">
+  <h2 class="title">Shopping Cart</h2>
+  <div class="list-container">
+    <app-shopping-cart-item *ngFor="let product of cartItems$ | async" [product]="product"></app-shopping-cart-item>
+  </div>
+  <div class="total">
+    Total: {{ getTotal() | async | currency }}
+  </div>
+</div>

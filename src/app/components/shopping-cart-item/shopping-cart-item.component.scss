@@ -1,0 +1,39 @@
+/* shopping-cart-item.component.scss */
+mat-card {
+  display: flex;
+  flex-wrap: wrap; /* permite que los elementos se ajusten a la siguiente línea si no hay suficiente espacio */
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 15px;
+}
+
+mat-card-header {
+  flex: 1 0 100%; /* ocupa todo el ancho en pantallas pequeñas */
+  margin-left: 20px;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+mat-card-content,
+mat-card-actions {
+  flex: 1 0 100%; /* ocupa todo el ancho en pantallas pequeñas */
+  margin-left: auto;
+}
+
+/* en pantallas medianas y grandes, los elementos se alinean en una fila */
+@media (min-width: 600px) {
+  mat-card-header,
+  mat-card-content,
+  mat-card-actions {
+    flex: 1 0 auto;
+  }
+}
+
+.remove {
+  color: red;
+}

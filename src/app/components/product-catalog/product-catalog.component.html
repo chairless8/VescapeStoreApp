@@ -10,10 +10,6 @@
     </div>
   </div>
   <div class="grid-container">
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
-    <!-- Add more app-product-card elements here -->
+    <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
   </div>
 </div>

@@ -21,21 +21,21 @@ export class ProductService {
       name: 'Comida',
       description: 'Deliciosa comida',
       price: 100,
-      imageUrl: 'https://storage.googleapis.com/angular_store_842/comida.jpg'
+      imageUrl: 'https://storage.googleapis.com/angular_store_842/imagenes%20angular/comida.jpg'
     },
     {
       id: '2',
       name: 'Cena',
       description: 'Exquisita cena',
       price: 200,
-      imageUrl: 'https://storage.googleapis.com/angular_store_842/cena.jpg'
+      imageUrl: 'https://storage.googleapis.com/angular_store_842/imagenes%20angular/cena.jpg'
     },
     {
       id: '3',
       name: 'Desayuno',
       description: 'Rico desayuno',
       price: 150,
-      imageUrl: 'https://storage.googleapis.com/angular_store_842/desayuno.jpg'
+      imageUrl: 'https://storage.googleapis.com/angular_store_842/imagenes%20angular/desayuno.jpg'
     }
   ];
   constructor() { }

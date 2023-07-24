@@ -5,9 +5,10 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { ProductCatalogComponent } from './components/product-catalog/product-catalog.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  { path: 'profile', component: UserProfileComponent },
+  { path: 'profile', component: UserProfileComponent, canActivate: [AuthGuard] },
   { path: 'products', component: ProductCatalogComponent },
   { path: 'products/:productId', component: ProductDetailsComponent },
   { path: 'cart', component: ShoppingCartComponent },

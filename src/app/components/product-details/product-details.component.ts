@@ -1,5 +1,6 @@
-// product-details.component.ts
-import { Component } from '@angular/core';
+// product-card.component.ts
+import { Component, Input } from '@angular/core';
+import { Product } from '../../interfaces/product';
 
 @Component({
   selector: 'app-product-details',
@@ -7,10 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent {
-  product = {
-    name: 'Example Product',
-    price: 100,
-    imageUrl: 'url-to-image',
-    description: 'This is a detailed description of the product.'
-  };
+  @Input() product!: Product;
 }

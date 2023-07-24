@@ -1,8 +1,12 @@
 <!-- navbar.component.html -->
 <mat-toolbar color="primary">
   <span>My E-Commerce App</span>
-  <span class="spacer"></span>
+  <button mat-button routerLink="/">Home</button>
   <button mat-button routerLink="/profile">Profile</button>
   <button mat-button routerLink="/products">Products</button>
   <button mat-button routerLink="/cart">Cart</button>
+  <span class="spacer"></span>
+  <button mat-button (click)="login()">Login</button>
+  <button mat-button (click)="register()">Register</button>
+  <button mat-button (click)="logout()">Logout</button>
 </mat-toolbar>
